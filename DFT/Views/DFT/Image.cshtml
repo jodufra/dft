@@ -1,0 +1,57 @@
+﻿@model DFT.Controllers.DFTController.DFTImageModel
+@{
+    ViewBag.Title = "Image Processing";
+}
+<section class="jumbotron">
+    <div class="container">
+        <h1>
+            <span>@ViewBag.Title</span>
+        </h1>
+        <div class="row ">
+            <div class="col-md-12">
+                <form  action="/DFT/Image" method="post" enctype="multipart/form-data">
+                    <div class="form-group fg-line">
+                        <label>Select one image</label>
+                        <input type="file" name="image" required />
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="submit" class="btn btn-success waves-effect waves-button waves-float text-center">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="imageResults" class="relative clearfix text-center container">
+    <div class="row">
+        @if (Model.HasImages)
+        {
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h2 style="display:inline-block">Input</h2>
+                <div class="image-wrapper">
+                    <img src="@Model.Src(Model.Input)" alt="Input" />
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h2 style="display:inline-block">Magnitude</h2>
+                <div class="image-wrapper">
+                    <img src="@Model.Src(Model.Mag)" alt="Magnitude" />
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h2 style="display:inline-block">Phase</h2>
+                <div class="image-wrapper">
+                    <img src="@Model.Src(Model.Phase)" alt="Phase" />
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h2 style="display:inline-block">Inverse</h2>
+                <div class="image-wrapper">
+                    <img src="@Model.Src(Model.Inverse)" alt="Inverse" />
+                </div>
+            </div>
+        }
+    </div>
+</section>

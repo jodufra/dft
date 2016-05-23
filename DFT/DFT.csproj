@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B2D5E19-9FD2-402F-9E30-FC16A65E8E37}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DFT</RootNamespace>
+    <AssemblyName>DFT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\app\css\styles.css" />
+    <Content Include="Content\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\app\imgs\small-loader-3.gif" />
+    <Content Include="Content\app\js\app.js" />
+    <Content Include="Content\app\js\layout.js" />
+    <Content Include="Content\app\js\pages\dft.calculation.js" />
+    <Content Include="Content\app\js\plugins\angular\angular.min.js" />
+    <Content Include="Content\app\js\plugins\jquery\jquery-1.9.1.js" />
+    <Content Include="Content\app\js\plugins\jquery\jquery-address.js" />
+    <Content Include="Content\app\js\plugins\jquery\jquery-ui.min.js" />
+    <Content Include="Content\app\js\plugins\jquery\jquery.validate.min.js" />
+    <Content Include="Content\app\js\plugins\sweetalert\sweetalert-dev.js" />
+    <Content Include="Content\app\js\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Content\app\js\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Content\import\css\app.css" />
+    <Content Include="Content\import\css\app.min.1.css" />
+    <Content Include="Content\import\css\app.min.2.css" />
+    <Content Include="Content\import\css\bootstrap.min.css" />
+    <Content Include="Content\import\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\import\js\bootstrap.js" />
+    <Content Include="Content\import\js\bootstrap.min.js" />
+    <Content Include="Content\import\js\charts.js" />
+    <Content Include="Content\import\js\demo.js" />
+    <Content Include="Content\import\js\flot-charts\bar-chart.js" />
+    <Content Include="Content\import\js\flot-charts\curved-line-chart.js" />
+    <Content Include="Content\import\js\flot-charts\dynamic-chart.js" />
+    <Content Include="Content\import\js\flot-charts\line-chart.js" />
+    <Content Include="Content\import\js\flot-charts\pie-chart.js" />
+    <Content Include="Content\import\js\functions.js" />
+    <Content Include="Content\import\js\jquery-2.1.1.min.js" />
+    <Content Include="Content\import\vendors\animate-css\animate.css" />
+    <Content Include="Content\import\vendors\animate-css\animate.min.css" />
+    <Content Include="Content\import\vendors\auto-size\jquery.autosize.js" />
+    <Content Include="Content\import\vendors\auto-size\jquery.autosize.min.js" />
+    <Content Include="Content\import\vendors\bootgrid\jquery.bootgrid.css" />
+    <Content Include="Content\import\vendors\bootgrid\jquery.bootgrid.js" />
+    <Content Include="Content\import\vendors\bootgrid\jquery.bootgrid.min.css" />
+    <Content Include="Content\import\vendors\bootgrid\jquery.bootgrid.min.js" />
+    <Content Include="Content\import\vendors\bootgrid\original\jquery.bootgrid.js" />
+    <Content Include="Content\import\vendors\bootgrid\original\jquery.bootgrid.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-datetimepicker\angular-bootstrap-datetimepicker.js" />
+    <Content Include="Content\import\vendors\bootstrap-datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\import\vendors\bootstrap-datetimepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-growl\bootstrap-growl.js" />
+    <Content Include="Content\import\vendors\bootstrap-growl\bootstrap-growl.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\import\vendors\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\import\vendors\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-cs_CZ.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-cs_CZ.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-de_DE.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-de_DE.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-en_US.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-en_US.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-es_CL.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-es_CL.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-eu.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-eu.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-fr_FR.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-fr_FR.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-it_IT.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-it_IT.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-nl_NL.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-nl_NL.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-pl_PL.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-pl_PL.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-pt_BR.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-pt_BR.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ro_RO.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ro_RO.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ru_RU.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ru_RU.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ua_UA.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-ua_UA.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-zh_CN.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-zh_CN.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-zh_TW.js" />
+    <Content Include="Content\import\vendors\bootstrap-select\i18n\defaults-zh_TW.min.js" />
+    <Content Include="Content\import\vendors\bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="Content\import\vendors\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Content\import\vendors\chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\import\vendors\chosen\chosen-sprite.png" />
+    <Content Include="Content\import\vendors\chosen\chosen.css" />
+    <Content Include="Content\import\vendors\chosen\chosen.jquery.js" />
+    <Content Include="Content\import\vendors\chosen\chosen.jquery.min.js" />
+    <Content Include="Content\import\vendors\chosen\chosen.min.css" />
+    <Content Include="Content\import\vendors\easypiechart\jquery.easypiechart.js" />
+    <Content Include="Content\import\vendors\easypiechart\jquery.easypiechart.min.js" />
+    <Content Include="Content\import\vendors\farbtastic\farbtastic.css" />
+    <Content Include="Content\import\vendors\farbtastic\farbtastic.js" />
+    <Content Include="Content\import\vendors\farbtastic\farbtastic.min.js" />
+    <Content Include="Content\import\vendors\farbtastic\marker.png" />
+    <Content Include="Content\import\vendors\farbtastic\mask.png" />
+    <Content Include="Content\import\vendors\farbtastic\wheel.png" />
+    <Content Include="Content\import\vendors\fileinput\fileinput.js" />
+    <Content Include="Content\import\vendors\fileinput\fileinput.min.js" />
+    <Content Include="Content\import\vendors\flot\excanvas.js" />
+    <Content Include="Content\import\vendors\flot\excanvas.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.colorhelpers.js" />
+    <Content Include="Content\import\vendors\flot\jquery.colorhelpers.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.canvas.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.categories.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.categories.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.crosshair.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.errorbars.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.image.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.image.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.navigate.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.navigate.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.orderBar.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.pie.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.resize.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.selection.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.selection.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.stack.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.stack.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.symbol.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.threshold.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.threshold.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.time.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.time.min.js" />
+    <Content Include="Content\import\vendors\flot\jquery.flot.tooltip.js" />
+    <Content Include="Content\import\vendors\flot\plugins\curvedLines.js" />
+    <Content Include="Content\import\vendors\fullcalendar\fullcalendar.css" />
+    <Content Include="Content\import\vendors\fullcalendar\fullcalendar.js" />
+    <Content Include="Content\import\vendors\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\import\vendors\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Content\import\vendors\fullcalendar\lang-all.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ar.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\bg.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ca.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\cs.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\da.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\de-at.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\de.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\el.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\en-au.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\en-ca.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\en-gb.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\es.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\fa.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\fi.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\fr.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\hi.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\hr.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\hu.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\id.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\is.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\it.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ja.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ko.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\lt.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\lv.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\nl.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\pl.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\pt-br.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\pt.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ro.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\ru.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\sk.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\sl.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\sr.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\sv.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\th.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\tr.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\uk.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\vi.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Content\import\vendors\fullcalendar\lib\moment.min.js" />
+    <Content Include="Content\import\vendors\fusioncharts\assets\css\mainstyle.css" />
+    <Content Include="Content\import\vendors\fusioncharts\assets\css\style.css" />
+    <Content Include="Content\import\vendors\fusioncharts\assets\scripts\html5shiv.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.charts.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.gantt.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.maps.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.powercharts.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.treemap.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.widgets.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\fusioncharts.zoomscatter.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\maps\fusioncharts.usa.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\maps\fusioncharts.world.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\maps\readme.txt" />
+    <Content Include="Content\import\vendors\fusioncharts\js\themes\fusioncharts.theme.carbon.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\themes\fusioncharts.theme.fint.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\themes\fusioncharts.theme.ocean.js" />
+    <Content Include="Content\import\vendors\fusioncharts\js\themes\fusioncharts.theme.zune.js" />
+    <Content Include="Content\import\vendors\input-mask\input-mask.js" />
+    <Content Include="Content\import\vendors\input-mask\input-mask.min.js" />
+    <Content Include="Content\import\vendors\material-icons\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\import\vendors\material-icons\material-design-iconic-font.css" />
+    <Content Include="Content\import\vendors\material-icons\material-design-iconic-font.min.css" />
+    <Content Include="Content\import\vendors\mediaelement\background.png" />
+    <Content Include="Content\import\vendors\mediaelement\bigplay.fw.png" />
+    <Content Include="Content\import\vendors\mediaelement\bigplay.png" />
+    <Content Include="Content\import\vendors\mediaelement\bigplay.svg" />
+    <Content Include="Content\import\vendors\mediaelement\controls-ted.png" />
+    <Content Include="Content\import\vendors\mediaelement\controls-wmp-bg.png" />
+    <Content Include="Content\import\vendors\mediaelement\controls-wmp.png" />
+    <Content Include="Content\import\vendors\mediaelement\controls.fw.png" />
+    <Content Include="Content\import\vendors\mediaelement\controls.png" />
+    <Content Include="Content\import\vendors\mediaelement\controls.svg" />
+    <Content Include="Content\import\vendors\mediaelement\flashmediaelement-cdn.swf" />
+    <Content Include="Content\import\vendors\mediaelement\flashmediaelement.swf" />
+    <Content Include="Content\import\vendors\mediaelement\jquery.js" />
+    <Content Include="Content\import\vendors\mediaelement\loading.gif" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelement-and-player.js" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelement-and-player.min.js" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelement.js" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelement.min.js" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelementplayer.css" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelementplayer.js" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelementplayer.min.css" />
+    <Content Include="Content\import\vendors\mediaelement\mediaelementplayer.min.js" />
+    <Content Include="Content\import\vendors\mediaelement\mejs-skins.css" />
+    <Content Include="Content\import\vendors\mediaelement\silverlightmediaelement.xap" />
+    <Content Include="Content\import\vendors\mediaelement\skipback.png" />
+    <Content Include="Content\import\vendors\moment\moment.js" />
+    <Content Include="Content\import\vendors\moment\moment.min.js" />
+    <Content Include="Content\import\vendors\nicescroll\jquery.nicescroll.js" />
+    <Content Include="Content\import\vendors\nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.all.js" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.all.min.js" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.css" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.js" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.min.css" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.min.js" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.pips.css" />
+    <Content Include="Content\import\vendors\noUiSlider\jquery.nouislider.pips.min.css" />
+    <Content Include="Content\import\vendors\selectize\selectize_orig.js" />
+    <Content Include="Content\import\vendors\selectize\selectize.bootstrap2.css" />
+    <Content Include="Content\import\vendors\selectize\selectize.bootstrap3.css" />
+    <Content Include="Content\import\vendors\selectize\selectize.css" />
+    <Content Include="Content\import\vendors\selectize\selectize.default.css" />
+    <Content Include="Content\import\vendors\selectize\selectize.js" />
+    <Content Include="Content\import\vendors\selectize\selectize.legacy.css" />
+    <Content Include="Content\import\vendors\socicon\fonts\socicon-webfont.svg" />
+    <Content Include="Content\import\vendors\socicon\socicon.css" />
+    <Content Include="Content\import\vendors\socicon\socicon.min.css" />
+    <Content Include="Content\import\vendors\sparklines\jquery.sparkline.js" />
+    <Content Include="Content\import\vendors\sparklines\jquery.sparkline.min.js" />
+    <Content Include="Content\import\vendors\sweet-alert\ie9.css" />
+    <Content Include="Content\import\vendors\sweet-alert\sweat-alert.css" />
+    <Content Include="Content\import\vendors\sweet-alert\sweet-alert.js" />
+    <Content Include="Content\import\vendors\sweet-alert\sweet-alert.min.css" />
+    <Content Include="Content\import\vendors\sweet-alert\sweet-alert.min.js" />
+    <Content Include="Content\import\vendors\waves\waves.js" />
+    <Content Include="Content\import\vendors\waves\waves.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\App_Start\RouteConfig.cs" />
+    <Compile Include="Application\Controllers\DFTController.cs" />
+    <Compile Include="Application\Controllers\HomeController.cs" />
+    <Compile Include="Application\Models\CostumComplex.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\import\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\import\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\import\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\import\vendors\bootstrap-datetimepicker\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\import\vendors\bootstrap-datetimepicker\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\import\vendors\bootstrap-select\bootstrap-select.less" />
+    <Content Include="Content\import\vendors\bootstrap-select\variables.less" />
+    <Content Include="Content\import\vendors\chosen\bootstrap-chosen-variables.less" />
+    <Content Include="Content\import\vendors\chosen\bootstrap-chosen.less" />
+    <Content Include="Content\import\vendors\chosen\chosen.jquery.min.js.map" />
+    <Content Include="Content\import\vendors\fileinput\fileinput.less" />
+    <Content Include="Content\import\vendors\fileinput\fileinput.min.js.map" />
+    <Content Include="Content\import\vendors\material-icons\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\import\vendors\material-icons\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\import\vendors\material-icons\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\import\vendors\material-shadow\material-shadows.less" />
+    <Content Include="Content\import\vendors\socicon\fonts\socicon-webfont.eot" />
+    <Content Include="Content\import\vendors\socicon\fonts\socicon-webfont.ttf" />
+    <Content Include="Content\import\vendors\socicon\fonts\socicon-webfont.woff" />
+    <Content Include="Content\import\vendors\socicon\fonts\socicon-webfont.woff2" />
+    <Content Include="Content\import\vendors\waves\waves.less" />
+    <Content Include="Views\DFT\Image.cshtml" />
+    <Content Include="Views\DFT\Calculation.cshtml" />
+    <Content Include="Content\import\vendors\fusioncharts\assets\css\style.less" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DFTLib\DFTLib.csproj">
+      <Project>{FBD7ABC4-374A-4C19-9CC4-036C098C0114}</Project>
+      <Name>DFTLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49668</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49668/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

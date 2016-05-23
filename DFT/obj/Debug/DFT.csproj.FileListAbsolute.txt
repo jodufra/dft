@@ -1,0 +1,98 @@
+D:\Visual Studio Projects\DFT\DFT\bin\ApplicationInsights.config
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\csc.exe
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\System.Collections.Immutable.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\System.Reflection.Metadata.dll
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\vbc.exe
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\VBCSCompiler.exe
+D:\Visual Studio Projects\DFT\DFT\bin\roslyn\VBCSCompiler.exe.config
+D:\Visual Studio Projects\DFT\DFT\bin\DFT.dll.config
+D:\Visual Studio Projects\DFT\DFT\bin\DFT.dll
+D:\Visual Studio Projects\DFT\DFT\bin\DFT.pdb
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.DependencyCollector.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.Web.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.WindowsServer.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.ApplicationInsights.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.Web.Infrastructure.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Helpers.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Mvc.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Razor.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.Deployment.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.dll
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.Razor.dll
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.DependencyCollector.xml
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.Web.xml
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.AI.WindowsServer.xml
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.ApplicationInsights.xml
+D:\Visual Studio Projects\DFT\DFT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Razor.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.Deployment.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Webpages.Razor.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Helpers.xml
+D:\Visual Studio Projects\DFT\DFT\bin\System.Web.Mvc.xml
+D:\Visual Studio Projects\DFT\DFT\obj\Debug\DFT.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\DFT\DFT\obj\Debug\DFT.dll
+D:\Visual Studio Projects\DFT\DFT\obj\Debug\DFT.pdb
+D:\Visual Studio Projects\DFT\DFT\bin\DFTLib.dll
+D:\Visual Studio Projects\DFT\DFT\bin\DFTLib.pdb
+C:\Users\Joel\Desktop\DFT\DFT\bin\ApplicationInsights.config
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\csc.exe
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\vbc.exe
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\VBCSCompiler.exe
+C:\Users\Joel\Desktop\DFT\DFT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Joel\Desktop\DFT\DFT\bin\DFT.dll.config
+C:\Users\Joel\Desktop\DFT\DFT\bin\DFT.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\DFT.pdb
+C:\Users\Joel\Desktop\DFT\DFT\bin\DFTLib.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.Web.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Helpers.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Mvc.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Razor.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.Razor.dll
+C:\Users\Joel\Desktop\DFT\DFT\bin\DFTLib.pdb
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.Web.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Razor.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Webpages.Razor.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Helpers.xml
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Web.Mvc.xml
+C:\Users\Joel\Desktop\DFT\DFT\obj\Debug\DFT.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Desktop\DFT\DFT\obj\Debug\DFT.dll
+C:\Users\Joel\Desktop\DFT\DFT\obj\Debug\DFT.pdb
+C:\Users\Joel\Desktop\DFT\DFT\bin\System.Numerics.dll

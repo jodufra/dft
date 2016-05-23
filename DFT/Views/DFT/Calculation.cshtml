@@ -1,0 +1,160 @@
+﻿@model DFT.Controllers.DFTController.DFTCalculationModel
+@{
+    ViewBag.Title = "Calculation";
+}
+<section id="calculationForm" class="jumbotron">
+    <div class="container">
+        <h1>
+            <span>@ViewBag.Title</span>
+        </h1>
+        <div class="row ">
+            <div class="col-md-12">
+                <form action="/DFT/Calculation" method="get">
+                    @if (Model.Errors.Any())
+                    {
+                        foreach (var item in Model.Errors)
+                        {
+                            <span class="text-danger error-message">@item</span>
+                        }
+                    }
+                    <div class="form-group fg-line">
+                        <label>Input values</label>
+                        <input type="text" class="form-control" data-plugin="tags-selectize" name="values" value="@Model.Input" required />
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="submit" class="btn btn-success waves-effect waves-button waves-float text-center">Send</button>
+                        <button type="reset" onclick="ClearTags()" class="btn waves-effect waves-button waves-float text-center">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="calculationResults" class="relative clearfix container">
+    @if (!Model.Errors.Any() && Model.Values.Any())
+    {
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="simple">
+                        <h2>Result <a href="#details" class="btn waves-effect waves-button waves-float text-center" style="float: right;background: #F7F7F7;" aria-controls="details" role="tab" data-toggle="tab"><small>More details</small></a></h2>
+                        <div class="form-group fg-line">
+                            <label></label>
+                            <pre>{ @String.Join(", ", Model.Output.Select(o => o.ToString())) }</pre>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="details">
+                        <h2>Result <a href="#simple" class="btn waves-effect waves-button waves-float text-center" style="float: right;background: #F7F7F7;" aria-controls="simple" role="tab" data-toggle="tab"><small>Less details</small></a></h2>
+                        <div class="form-group">
+                            <label></label>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Input</td>
+                                        <td>Real</td>
+                                        <td>Imag</td>
+                                        <td>Amplitude</td>
+                                        <td>Phase</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int i = 0; i < Model.Values.Count; i++)
+                                    {
+                                        <tr>
+                                            <td>@Model.Values[i]</td>
+                                            <td>@Model.Output[i].Real</td>
+                                            <td>@Model.Output[i].Imaginary</td>
+                                            <td>@Model.Output[i].Magnitude</td>
+                                            <td>@Model.Output[i].Phase</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#inputsignal" aria-controls="inputsignal" role="tab" data-toggle="tab">Input Signal Chart</a></li>
+                    <li role="presentation"><a href="#magnitude" aria-controls="magnitude" role="tab" data-toggle="tab">Magnitude Chart</a></li>
+                    <li role="presentation"><a href="#phase" aria-controls="phase" role="tab" data-toggle="tab">Phase Chart</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="inputsignal">
+                        <div id="inputsignal-chart-container">
+                            <div id="Loader"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="magnitude">
+                        <div id="magnitude-chart-container">
+                            <div id="Loader"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="phase">
+                        <div id="phase-chart-container">
+                            <div id="Loader"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+
+@section JScripts{
+    @if (!Model.Errors.Any() && Model.Values.Any())
+    {
+        List<String> renderer;
+        <script type="text/javascript">
+            var Charts = {
+                InputSignal: {
+                    data: [
+                        @{
+                            renderer = new List<String>();
+                            for (int i = 0; i < Model.Values.Count; i++)
+                            {
+                                renderer.Add("{ label : \"" + i + "\",  value : \"" + Model.Values[i] + "\" }");
+                            }
+
+                        }
+                        @Html.Raw(String.Join(",", renderer))
+                    ]
+                },
+                Magnitude: {
+                    data: [
+                        @{
+                            renderer = new List<String>();
+                            for (int i = 0; i < Model.Output.Length; i++)
+                            {
+                                renderer.Add("{ label : \"" + i + "\",  value : \"" + Model.Output[i].Magnitude + "\" }");
+                            }
+
+                        }
+                        @Html.Raw(String.Join(",", renderer))
+                    ]
+                },
+                Phase: {
+                    data: [
+                        @{
+                            renderer = new List<String>();
+                            for (int i = 0; i < Model.Output.Length; i++)
+                            {
+                                renderer.Add("{ label : \"" + i + "\",  value : \"" + Model.Output[i].Phase + "\" }");
+                            }
+
+                        }
+                        @Html.Raw(String.Join(",", renderer))
+                    ]
+                }
+            }
+        </script>
+        <script src="~/Content/import/vendors/fusioncharts/js/fusioncharts.js" type="text/javascript"></script>
+        <script src="~/Content/import/vendors/fusioncharts/js/fusioncharts.charts.js" type="text/javascript"></script>
+        <script src="~/Content/app/js/pages/dft.calculation.js" type="text/javascript"></script>
+    }
+}

@@ -1,0 +1,10 @@
+D:\Visual Studio Projects\DFT\DFTLib\bin\Debug\DFTLib.dll
+D:\Visual Studio Projects\DFT\DFTLib\bin\Debug\DFTLib.pdb
+D:\Visual Studio Projects\DFT\DFTLib\obj\Debug\DFTLib.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\DFT\DFTLib\obj\Debug\DFTLib.dll
+D:\Visual Studio Projects\DFT\DFTLib\obj\Debug\DFTLib.pdb
+C:\Users\Joel\Desktop\DFT\DFTLib\bin\Debug\DFTLib.dll
+C:\Users\Joel\Desktop\DFT\DFTLib\bin\Debug\DFTLib.pdb
+C:\Users\Joel\Desktop\DFT\DFTLib\obj\Debug\DFTLib.dll
+C:\Users\Joel\Desktop\DFT\DFTLib\obj\Debug\DFTLib.pdb
+C:\Users\Joel\Desktop\DFT\DFTLib\obj\Debug\DFTLib.csprojResolveAssemblyReference.cache
